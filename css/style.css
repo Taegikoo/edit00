@@ -1,0 +1,328 @@
+@charset "utf-8";
+:root {
+    --main-color: #3db0e6;
+    --main-hover-color: #079adf;
+    --sub-color: #1d8844;
+    --book-color: #425b9c;
+}
+
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul, ol {list-style: none;}
+a {
+    text-decoration: none;
+    color: #555;
+    box-sizing: border-box;
+}
+
+/* 전체 */
+html {scroll-behavior: smooth;}
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 상단 */
+/* 상단 좌 */
+.header-flex-left {
+    display: inline-block;
+    margin: 20px 50px 20px 0;
+}
+.header-flex-left a img {width: 120px;}
+/* 상단 중 */
+.header-flex-center {
+    position: relative;
+    float: right;
+    width: 70%;
+    margin-left: 2%;
+}
+.header-flex-center ul li.header-left-gnb-con {
+    margin: 4% 0 1%;
+    float: left;
+    width: 100px;
+    /* line-height: 100px; */
+}
+.header-flex-center ul li.header-left-gnb-con ol.header-hide {
+    display: none;
+    border: 1px solid #00f;
+}
+.header-flex-center ul li.header-left-gnb-con ol.header-hide:hover {display: block;}
+.header-flex-center ul li.header-left-gnb-con ol.header-hide li {
+    width: 100px;
+    line-height: 2;
+}
+/*상단 우 */
+.header-flex-right {
+    position: relative;
+    float: left;
+    width: 215px;
+    top: -10px;
+}
+.header-flex-right ol .header-right-gnb-con {
+    float: left;
+    width: 100px;
+    line-height: 100px;
+    margin-right: 3%;
+    position: relative;
+    bottom: 6.5em;
+    left: 59em;
+}
+/* 상단 검색 */
+.search {margin: 3% 0;}
+.search span {
+    font-size: 20px;
+    display: inline-block;
+    position: absolute;
+    top: 155px;
+    right: 240px;
+    cursor: pointer;
+}
+.search input {
+    width: 770px;
+    height: 50px;
+    font-size: 14pt;
+    padding: 0 20px;
+    border-radius: 25px;
+    outline: none;
+}
+.search input[type="search"]:focus {outline: none;}
+
+/* 메인 */
+/* 신간 메뉴 */
+.con {padding: 3% 0;}
+.tab_menu {
+    display: flex;
+    font-size: 20pt;
+    font-weight: bold;
+}
+.tab_menu a {
+    color: #555;
+    text-decoration: none;
+    display: block;
+    width: 200px;
+    float: left;
+    background-color: #eee;
+    padding: 2%;
+}
+.tab_menu a.on {
+    background-color: var(--sub-color);
+    color: #fff;
+}
+
+/* 신간 내용 */
+.tab_box {
+    padding: 2%;
+    background-color: #eee;
+    overflow: hidden;
+    height: 350px;
+    margin-bottom: 2%;
+}
+.tab_box > .list {
+    width: 2000px;
+    margin-bottom: 40px;
+}
+.tab_box > .list li {
+    float: left;
+    overflow: hidden;
+    padding-right: 36px;
+}
+/* 이벤트 */
+.event-book {
+    height: 770px;
+    padding: 30px;
+    background-color: #eee;
+    margin-bottom: 40px;
+}
+.event-book h2 {
+    font-size: 18pt;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border: 1px solid var(--sub-color);
+    padding: 10px;
+    display: inline-block;
+    background: var(--sub-color);
+    color: #fff;
+}
+.event-book-list li {
+    display: inline-block;
+    margin: 0px 40px 40px;
+    overflow: hidden;
+    transform: scale(1);
+}
+.tab_box .list li a img,
+.event-book-list li a img {
+    width: 200px;
+    height: 300px;
+    transition: 0.5s;
+}
+.event-book-list li a img:hover {transform: scale(1.1);}
+.tab_box .list li a span,
+.event-book-list li a span {display: none;}
+
+/* 굿즈 */
+.goods_box {width: 50% !important;}
+
+/* 하단 */
+footer {position: relative;}
+footer > ul {margin-left: 15%;}
+footer > ul li {
+    display: inline-block;
+    margin: 0 2%;
+}
+footer > ul li a {
+    color: #777;
+    transition: 2s;
+}
+footer > ul li a:hover {color: #000;}
+.foot {margin-top: 2%;}
+.foot .bot_logo img {width: 180px;}
+footer .foot p {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    padding: 0 5%;
+}
+footer .foot p i {
+    font-size: 30px;
+    padding: 0 10px;
+    transition: .3s;
+}
+footer .foot p i.fa-youtube:hover {color: #f60000;}
+footer .foot p i.fa-facebook-square:hover {color: #4867aa;}
+footer .foot p i.fa-instagram:hover {color: #bf346f;}
+footer .foot p i.fa-twitter:hover {color: #1da1f2;}
+.foot span {
+    vertical-align: top;
+    display: inline-block;
+    line-height: 2;
+    font-size: 14px;
+    margin-top: 1%;
+}
+footer > p {
+    text-align: center;
+    padding: 3% 0 2%;
+}
+
+/*top*/
+aside {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #fff;
+    color: #fff;
+    border-color: #555;
+    border-radius: 25px;
+    box-shadow: 10px 10px 15px #333;
+    position: fixed;
+    right: 3%;
+    bottom: 5%;
+    z-index: 10000;
+    transition: 0.5s;
+}
+aside:hover {
+    background-color: var(--main-hover-color);
+    color: #fff;
+}
+aside a {display: block;}
+
+/* Tablet 415 ~ 1024 */
+@media screen and (max-width: 980px) {
+    #wrap {max-width: 100%;}
+    .header-flex-left {
+        display: block;
+        text-align: center;
+        margin: 2% 38%;
+    }
+    .header-flex-center {
+        float: none;
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .header-flex-center ul {
+        line-height: 2;
+        background-color: skyblue;
+    }
+    .header-flex-center ul li.header-left-gnb-con {
+        float: none;
+        width: 100%;
+        margin: 2% 0;
+        border-bottom: 1px solid #000;
+    }
+    .header-flex-center ul li.header-left-gnb-con:last-child {border-bottom: 0 solid #999;}
+    .header-flex-right .header-right-gnb  {display: none;}
+    .search {margin: 3% auto;}
+    .search input {
+        width: 70%;
+        margin: 3% 15%;
+    }
+    .search span {display: none;}
+
+    .tab_menu {
+        margin: 0 auto;
+        max-width: 90%;
+        text-align: center;
+        font-size: 1em;
+    }
+    .tab_menu a {width: 100%;}
+
+    .tab_box {
+        display: flex;
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 0;
+        height: 100%;
+    }
+    .tab_box .list {
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+        margin: 4%;
+    }
+    .tab_box .list > li {
+        margin: 10% 0;
+        padding: 0;
+    }
+
+    .bx-wrapper {
+        min-width: 90% !important;
+        max-width: 90% !important;
+        margin: 2% auto !important;
+    }
+
+    .event-book {
+        display: flex;
+        flex-flow: column;
+        margin: 10% 5% 0;
+        height: 100%;
+        text-align: center;
+    }
+    .goods_slider .goods_box {width: 100% !important;}
+    footer {
+        margin: 0% auto;
+        width: 90%;
+    }
+    footer ul {
+        margin-left: 0;
+        margin-top: 3%;
+    }
+    footer .foot {
+        margin-top: 10%;
+        text-align: center;
+    }
+    footer .foot .bot_logo {text-align: center;}
+    footer .foot p {top: 20%;}
+
+    aside {
+        bottom: 3%;
+        right: 7%;
+    }
+}
